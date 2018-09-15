@@ -12,14 +12,7 @@ end
 
 def long_planeteer_calls(calls)# code an argument here
   # Your code here
-  results = []
-  calls.each { |call|
-    if call.length > 4
-      results << true
-    else
-      results << false
-    end}
-  if calls.include?(true)
+  if calls.any? {|call| call.length > 4} == true
     return true
   else
     return false
