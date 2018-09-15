@@ -12,10 +12,18 @@ end
 
 def long_planeteer_calls(calls)# code an argument here
   # Your code here
+  results = []
   calls.each { |call|
     if call.length > 4
-      return true
+      results << true
+    else
+      results << false
     end}
+  if calls.include?(true)
+    return true
+  else
+    return false
+  end
 end
 
 def find_the_cheese# code an argument here
